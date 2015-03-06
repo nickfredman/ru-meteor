@@ -6,30 +6,37 @@
 
 // get specific person ID
 
- 	Template.viewModal.helpers({
-    	viewamember: function() {
-     	 var memberId = Session.get('selectedMember');
-        var data = Listdb.find({_id:memberId}).fetch();
-        var testemail = getGravatar(data.email, 150);
-
-    	  return (
-        {
-        name: {
-          firstName: data.name.firstName,
-          lastName: data.name.lastName
-        },
-        email:testemail,
-        priorWork:data.priorWork,
-        aspirations: data.aspirations,
-        skills: data.skills,
-        contact: {
-          twitter:data.contact.twitter,
-          linkIn:data.contact.linkIn,
-          faceBook:data.contact.faceBook
-        }
-        }); 
-    }
-  });
+ 	// Template.viewModal.helpers({
+  //   	viewamember: function() {
+  //    	 var memberId = Session.get('selectedMember');
+       //return Listdb.find({_id:memberId}).fetch();
+       //var data = Listdb.findOne(memberId);
+       //console.log("data:", data);
+        // var data = Listdb.find({_id:memberId}).fetch();
+        // console.log("email: ", data[0].email);
+        // var testemail = getGravatar(data[0].email, 150);
+        // console.log("testemail:", testemail);
+        //return true;
+       //  var dataformat = 
+       //  {
+       //    name: {
+       //      firstName: data[0].name.firstName,
+       //      lastName: data[0].name.lastName
+       //    },
+       //  email:testemail,
+       //  priorWork:data[0].priorWork,
+       //  aspirations: data[0].aspirations,
+       //  skills: data[0].skills,
+       //  contact: {
+       //    twitter:data[0].contact.twitter,
+       //    linkIn:data[0].contact.linkIn,
+       //    faceBook:data[0].contact.faceBook
+       //    }
+       //  };
+       //  console.log(dataformat);
+    	  // return dataformat; 
+  //   }
+  // });
   
   Template.body.events({
     //View a member
@@ -47,5 +54,7 @@
     }
 
    }); // end of Template.viewModal.helpers
+
+ 
 
 } // end of if (Meteor.isClient)

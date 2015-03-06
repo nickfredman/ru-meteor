@@ -285,10 +285,43 @@ if (Meteor.isClient) {
         
         getImage: function(size) {
 
-            console.log("url:", getGravatar(this.email, size));
+            //console.log("url:", getGravatar(this.email, size));
             return getGravatar(this.email, size)
             // return 'http://www.gravatar.com/avatar/bd75750194f8d0ea674f1ac550ff6110';
         }
     });
 
+    Template.viewModal.helpers({
+        viewamember: function() {
+         var memberId = Session.get('selectedMember');
+       //return Listdb.find({_id:memberId}).fetch();
+       //var data = Listdb.findOne(memberId);
+       //console.log("data:", data);
+        var data = Listdb.find({_id:memberId}).fetch();
+        console.log("email: ", data[0].email);
+        var testemail = getGravatar(data[0].email, 150);
+        console.log("testemail:", testemail);
+        //return true;
+        data[0].email = testemail; 
+        return data;
+        // ({
+        //   name: {
+        //     firstName: data[0].name.firstName,
+        //     lastName: data[0].name.lastName
+        //   },
+        // email:testemail,
+        // priorWork:data[0].priorWork,
+        // aspirations: data[0].aspirations,
+        // skills: data[0].skills,
+        // contact: {
+        //   twitter:data[0].contact.twitter,
+        //   linkIn:data[0].contact.linkIn,
+        //   faceBook:data[0].contact.faceBook
+        //   }
+        // });
+        // console.log("dataformat:", dataformat);
+        //   return dataformat; 
     }
+  });
+
+}
