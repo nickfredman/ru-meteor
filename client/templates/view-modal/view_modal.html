@@ -1,7 +1,7 @@
 <template name="viewModal">
     <div class="column third" data-in="{{_id}}">
         <div class="topButtons"><i class="fa fa-pencil editOverlay"></i> &nbsp;<i class="fa fa-times closeView"></i></div>
-        {{#each viewamember}}
+        {{#with viewamember}}
             <div class="avatar">
                 <img src="{{email}}">
             </div>
@@ -11,10 +11,7 @@
             <span class="info"><strong>Aspirations:</strong> {{aspirations}}</span>
             <span class="info"><strong>Skills:</strong> {{skills}}</span>
             <span class="info first"><a href="http://linkedin.com/in/{{contact.linkIn}}"><i class="fa fa-linkedin-square fa-2x"></i></a> <a href="http://www.facebook.com/{{contact.faceBook}}"><i class="fa fa-facebook-square fa-2x"></i></a> <a href="http://www.twitter.com/{{contact.twitter}}"><i class="fa fa-twitter-square fa-2x"></i></a></span>
-            <!-- <div class="avatar">
-                <img src="{{getImage 150}}">
-            </div> -->
-            
-        {{/each}}
+
+        {{/with}}
     </div>
 </template>

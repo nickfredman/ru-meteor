@@ -2,6 +2,7 @@
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    // DEFAULT DATABASE ENTRIES
       if (Listdb.find().count()<1){
         Listdb.insert({
           name: {firstName: 'Mariel', lastName: 'Milito'},
@@ -30,6 +31,5 @@ if (Meteor.isServer) {
           contact:{linkedIn: 'Charles Harrod', faceBook: 'Charles Harrod'}
         });
     }
-    //console.log(Listdb.find().fetch());
   });
 }
