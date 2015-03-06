@@ -191,13 +191,4 @@ if (Meteor.isClient) {
 
     // },
 
-    // delete selected person
-  Template.body.events({
-    "click .delete": function(e) {
-      e.preventDefault();
-      var d = Blaze.getData(event.target);
-      Listdb.remove({_id:d._id});
-    }
-
-  }); // end of Template,body.events
 } // end of (Meteor.isClient)

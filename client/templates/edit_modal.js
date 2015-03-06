@@ -70,13 +70,12 @@
 
 
     // delete selected person
-
-  "click .delete": function() {
-    // e.preventDefault();
-    var d = Blaze.getData(event.target);
-    // console.log("d", d);
-    Listdb.remove({_id:d._id});
-  }
+    "click .del-btn": function() {
+    var memberId = Session.get('selectedMember');
+    Listdb.remove({_id:memberId});
+    $('.edit').css('display','none');
+    $('#overlay').css('display','none');
+    }
 
 
 
