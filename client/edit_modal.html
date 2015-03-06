@@ -1,0 +1,19 @@
+<template name="editModal">
+    <div class="editable-modal" data-in="{{_id}}">
+        <div class="topButtons"><i class="fa fa-times closeEdit"></i></div>
+        <h2>Edit Your Details</h2>
+        <form>
+            <input type="text" id="editfirstName" placeholder="First Name: ">
+            <input type="text" id="editlastName" placeholder="Last Name: ">
+            <input type="email" id="editemail" placeholder="Please enter your email address">
+            <textarea type="text" id="editpriorWork" placeholder="Please list any prior experience"></textarea>
+            <input type="text" id="editaspirations" placeholder="List your aspirations">
+            <input type="text" id="editskills" placeholder="Skills">
+            <input type="text" id="edittwitter" placeholder="Twitter">
+            <input type="url" id="editlinkIn" placeholder="LinkedIn">
+            <input type="url" id="editfaceBook" placeholder="Facebook">
+            <button class="editBtn">Submit</button>
+            <p><a href="#">Delete Member</a></p>
+        </form>
+    </div>
+</template>
