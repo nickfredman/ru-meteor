@@ -1,5 +1,5 @@
 
- 
+
 if (Meteor.isClient) {
   Meteor.startup(function () {
     new WOW().init();
@@ -9,7 +9,7 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
-  // get data from database and 
+  // get data from database and
   // display on the index.html
   Template.body.helpers({
     listdb: function() {
@@ -32,9 +32,9 @@ if (Meteor.isClient) {
   //     $('#overlay').css('display','block');
   //     $('.view').css('display','block');
   //     var d = Blaze.getData(event.target);
-  //     Session.set('selectedMember', d._id); 
-  //   }, 
-    
+  //     Session.set('selectedMember', d._id);
+  //   },
+
   //   // View a member - closing
   //   "click .closeView": function(e) {
   //     $('#overlay').css('display','none');
@@ -78,7 +78,7 @@ if (Meteor.isClient) {
     //       linkIn:linkIn,
     //       faceBook:faceBook
     //     }
-    //   });      
+    //   });
     // },
     //   // Add a new member - close the form via X
     //   "click .closeCreate": function(e) {
@@ -87,7 +87,7 @@ if (Meteor.isClient) {
     //   $('.create').css('display','none');
     // },
 
-    // // Edit a member 
+    // // Edit a member
     // "click .editOverlay": function(e) {
     //   $('.view').css('display','none');
     //   $('.edit').css('display','block');
@@ -139,7 +139,7 @@ if (Meteor.isClient) {
     //           faceBook:faceBook
     //       }
     //     }
-    //   }); 
+    //   });
     //   $('.edit').css('display','none');
     //   $('#overlay').css('display','none');
     // },
@@ -149,7 +149,7 @@ if (Meteor.isClient) {
     //   $('.edit').css('display','none');
     //   $('#overlay').css('display','none');
     // },
-    
+
     // "submit .new-member": function(e) {
     //   e.preventDefault();
 
@@ -201,38 +201,3 @@ if (Meteor.isClient) {
 
   }); // end of Template,body.events
 } // end of (Meteor.isClient)
- // server side
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-      if (Listdb.find().count()<1){
-        Listdb.insert({
-          name: {firstName: 'Mariel', lastName: 'Milito'},
-          email: 'militomariel@gmail.com',
-          priorWork: 'Ski Industry',
-          aspirations: 'I want to code',
-          skills:['PCI','commuting'],
-          contact:{twitter: '@marielmilito', linkedIn: 'Mariel Milito', faceBook: 'Mariel Dickson Milito'}
-        });
-
-        Listdb.insert({
-          name: {firstName: 'Charlie', lastName: 'Fox'},
-          email: 'webartificer@gmail.com',
-          priorWork: 'Designer',
-          aspirations: 'Code Ninja',
-          skills:['UI'],
-          contact:{twitter: '@oakseven', linkedIn: 'webartificer'}
-        });
-
-        Listdb.insert({
-          name: {firstName: 'Charles', lastName: 'Harrod'},
-          email: 'sam.charles.harrod@gmail.com',
-          priorWork: 'Retail Mgmt',
-          aspirations: 'Badass',
-          skills:['not really'],
-          contact:{linkedIn: 'Charles Harrod', faceBook: 'Charles Harrod'}
-        });
-    }
-    //console.log(Listdb.find().fetch());
-  });
-}
