@@ -140,6 +140,8 @@ if (Meteor.isClient) {
           }
         }
       }); 
+      $('.edit').css('display','none');
+      $('#overlay').css('display','none');
     },
 
     // Edit a member - pencil - closing
