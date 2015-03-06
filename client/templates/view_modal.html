@@ -1,10 +1,9 @@
 <template name="viewModal">
     <div class="column third" data-in="{{_id}}">
         <div class="topButtons"><i class="fa fa-pencil editOverlay"></i> &nbsp;<i class="fa fa-times closeView"></i></div>
-        <div class="avatar">
-            <!-- need image data -->
-            <img src="/img/no_avatar.jpg">
-        </div>
+<!--         <div class="avatar">
+            <img src="{{getImage 150}}">
+        </div> -->
         {{#each viewamember}}
             <span class="info first">Name: {{name.firstName}} {{name.lastName}}</span>
             <span class="info">Email: {{email}}</span>

@@ -1,4 +1,4 @@
-// Edit a member 
+// Edit a member
   if(Meteor.isClient){
 
     Template.body.events({
@@ -8,7 +8,7 @@
 
       var memberId = Session.get('selectedMember');
       var data = Listdb.findOne({_id:memberId});
-      
+
         // update display on page with new form data
       $('#editfirstName').val(data.name.firstName);
       $('#editlastName').val(data.name.lastName);
@@ -23,7 +23,7 @@
 
     // submit edited data to db using submit button
       // get edited values from form
-   
+
       "click .editBtn": function(e) {
         $('.view').css('display','none');
         $('.edit').css('display','block');
@@ -39,7 +39,7 @@
           var faceBook = $('#editfaceBook').val();
 
       // do the actual db update with edited form data
-      
+
       Listdb.update(memberId,
           {$set: {
             name: {
@@ -56,8 +56,8 @@
               faceBook: faceBook
           }
         }
-      }); 
-      
+      });
+
       $('.edit').css('display','none');
       $('#overlay').css('display','none');
     },
@@ -70,15 +70,14 @@
 
 
     // delete selected person
-    
-       "click .delete": function() {
-        // e.preventDefault();
-         var d = Blaze.getData(event.target);
-         console.log("d", d);
-         Listdb.remove({_id:d._id});
 
-          }
-      
+  "click .delete": function() {
+    // e.preventDefault();
+    var d = Blaze.getData(event.target);
+    // console.log("d", d);
+    Listdb.remove({_id:d._id});
+  }
+
 
 
      }); // end of Template.body.events

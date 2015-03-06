@@ -359,4 +359,14 @@ footer {
         width: 33%;
     }
 
+    .del-btn {
+        width: 15%;
+        border-radius: 5px;
+        padding: 8px;
+        color: #fff;
+        background: #F97783;
+        font-size: .8rem;
+        text-decoration: none;
+    }
+
 }
