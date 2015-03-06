@@ -9,9 +9,27 @@
  	Template.viewModal.helpers({
     	viewamember: function() {
      	 var memberId = Session.get('selectedMember');
-      return Listdb.find({_id:memberId}).fetch();
-    	}
-  	});
+        var data = Listdb.find({_id:memberId}).fetch();
+        var testemail = getGravatar(data.email, 150);
+
+    	  return (
+        {
+        name: {
+          firstName: data.name.firstName,
+          lastName: data.name.lastName
+        },
+        email:testemail,
+        priorWork:data.priorWork,
+        aspirations: data.aspirations,
+        skills: data.skills,
+        contact: {
+          twitter:data.contact.twitter,
+          linkIn:data.contact.linkIn,
+          faceBook:data.contact.faceBook
+        }
+        }); 
+    }
+  });
   
   Template.body.events({
     //View a member

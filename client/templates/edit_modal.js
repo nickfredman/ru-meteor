@@ -16,9 +16,9 @@
       $('#editpriorWork').val(data.priorWork);
       $('#editaspirations').val(data.aspirations);
       $('#editskills').val(data.skills);
-      $('#edittwitter').val(data.twitter);
-      $('#editlinkIn').val(data.linkIn);
-      $('#editfaceBook').val(data.faceBook);
+      $('#edittwitter').val(data.contact.twitter);
+      $('#editlinkIn').val(data.contact.linkIn);
+      $('#editfaceBook').val(data.contact.faceBook);
     },
 
     // submit edited data to db using submit button

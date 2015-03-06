@@ -282,11 +282,13 @@ if (Meteor.isClient) {
 
 // });
     Template.member.helpers({
+        
         getImage: function(size) {
-            console.log(this);
+
+            console.log("url:", getGravatar(this.email, size));
             return getGravatar(this.email, size)
             // return 'http://www.gravatar.com/avatar/bd75750194f8d0ea674f1ac550ff6110';
         }
-    })
+    });
 
     }

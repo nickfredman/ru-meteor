@@ -17,6 +17,8 @@ if (Meteor.isClient) {
     }
   });
 
+      
+
   // get specific person ID
   // Template.viewModal.helpers({
   //   viewamember: function() {
