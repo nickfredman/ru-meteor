@@ -272,7 +272,6 @@ var getGravatar = function(email, size) {
     };
 
     var size = size || 80;
-    console.log(MD5('ntfredman@gmail.com'));
     return 'http://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size;
 };
 
