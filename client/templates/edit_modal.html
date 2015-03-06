@@ -3,18 +3,19 @@
         <div class="topButtons"><i class="fa fa-times closeEdit"></i></div>
         <h2>Edit Your Details</h2>
         <form>
-            <input type="text" id="editfirstName" placeholder="First Name: ">
-            <input type="text" id="editlastName" placeholder="Last Name: ">
-            <input type="email" id="editemail" placeholder="Please enter your email address">
-            <textarea type="text" id="editpriorWork" placeholder="Please list any prior experience"></textarea>
-            <input type="text" id="editaspirations" placeholder="List your aspirations">
-            <input type="text" id="editskills" placeholder="Skills">
-            <input type="text" id="edittwitter" placeholder="Twitter">
-            <input type="url" id="editlinkIn" placeholder="LinkedIn">
-            <input type="url" id="editfaceBook" placeholder="Facebook">
-            <button class="editBtn">Submit</button>
-            <p><a href="#" id="delete" class="del-btn">Delete Member</a></p>
+            <label for="editfirstName">First Name</label><input type="text" id="editfirstName" placeholder="First Name: ">
+            <label for="editlastName">Last Name</label><input type="text" id="editlastName" placeholder="Last Name: ">
+            <label for="editemail">Email</label><input type="email" id="editemail" placeholder="Please enter your email address">
+            <label for="editpriorWork">Prior Work</label><textarea type="text" id="editpriorWork" placeholder="Please list any prior experience"></textarea>
+            <label for="editaspirations">Aspirations</label><input type="text" id="editaspirations" placeholder="List your aspirations">
+            <label for="editskills">Skills</label><input type="text" id="editskills" placeholder="Skills">
+            <label for="edittwitter">Twitter</label><input type="text" id="edittwitter" placeholder="Twitter Profile">
+            <label for="editlinkIn">LinkedIn</label><input type="url" id="editlinkIn" placeholder="LinkedIn Profile">
+            <label for="editfaceBook">Facebook</label><input type="url" id="editfaceBook" placeholder="Facebook Profile">
+            <button class="editBtn clearfix">Submit</button>
 
         </form>
+        <p><a href="#" id="delete" class="del-btn">Delete Member</a></p>
+
     </div>
 </template>
